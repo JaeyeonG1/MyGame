@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    float speed = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LButtonDown()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            transform.Translate(-0.5f, 0, 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            transform.Translate(0.5f, 0, 0);
-        }
+        transform.Translate(-1, 0, 0);
+    }
+    public void RButtonDown()
+    {
+        transform.Translate(1, 0, 0);
     }
 }
