@@ -1,31 +1,45 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
 
-public class PlayerBottomController : MonoBehaviourPunCallbacks
+public class PlayerAnimationManager : MonoBehaviourPun
 {
-    Rigidbody2D rigid2D;
+    #region MonoBehaviour Callbacks
+
     Animator animator;
+    Rigidbody2D rigid2D;
     float jumpForce = 580.0f;
     float walkForce = 30.0f;
     float maxWalkSpeed = 2.0f;
-    
+
+    // Use this for initialization
     void Start()
     {
-        this.rigid2D = GetComponent<Rigidbody2D>();
-        this.animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+        rigid2D = GetComponent<Rigidbody2D>();
+        if (!animator)
+        {
+            Debug.LogError("PlayerAnimatorManager is Missing Animator Component", this);
+        }
     }
 
+
+    // Update is called once per frame
     void Update()
     {
+        // 해당 클라이언트의 인스턴스인지 확인
         if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
         {
             return;
         }
+        // 애니메이터 존재 확인
+        if (!animator)
+        {
+            return;
+        }
         // 점프
-        if (Input.GetKeyDown(KeyCode.UpArrow) && this.rigid2D.velocity.y ==0)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && this.rigid2D.velocity.y == 0)
         {
             this.animator.SetTrigger("JumpTrigger");
             this.rigid2D.AddForce(transform.up * this.jumpForce);
@@ -40,19 +54,19 @@ public class PlayerBottomController : MonoBehaviourPunCallbacks
         float speedx = Mathf.Abs(this.rigid2D.velocity.x);
 
         // 스피드 제한
-        if(speedx < this.maxWalkSpeed)
+        if (speedx < this.maxWalkSpeed)
         {
             this.rigid2D.AddForce(transform.right * key * this.walkForce);
         }
 
         // 이동 방향에 따라 캐릭터 반전
-        if(key != 0)
+        if (key != 0)
         {
             transform.localScale = new Vector3(key, 1, 1);
         }
 
         // 플레이어 속도에 맞춰 애니메이션 속도 변환
-        if(this.rigid2D.velocity.y == 0)
+        if (this.rigid2D.velocity.y == 0)
         {
             this.animator.speed = speedx / 2.0f;
         }
@@ -60,13 +74,8 @@ public class PlayerBottomController : MonoBehaviourPunCallbacks
         {
             this.animator.speed = 1.0f;
         }
-
-        // 플레이어가 화면 밖으로 나갔을 때
-        if(transform.position.y < -5)
-        {
-            GameObject director = GameObject.Find("GameUIDirector");
-            director.GetComponent<GameUIDirector>().DecreaseHpBottom();
-            transform.position = new Vector3(0, -3.9f, 0);
-        }
     }
+
+
+    #endregion
 }

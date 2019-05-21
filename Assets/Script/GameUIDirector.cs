@@ -3,11 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class GameUIDirector : MonoBehaviour
+public class GameUIDirector : MonoBehaviourPunCallbacks, IPunObservable
 {
+    // IPunObservable 구현
+    #region IPunObservable implementation
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {// We own this player: send the others our data
+            stream.SendNext(hpGaugeBottom);
+        }
+        else
+        {// Network player, receive data
+            this.hpGaugeBottom = (GameObject)stream.ReceiveNext();
+        }
+    }
+
+    #endregion
+    public static GameObject LocalPlayerInstance;
     GameObject hpGaugeBottom;
     GameObject hpGaugeTop;
+
+    void Awake()
+    {
+        if (photonView.IsMine)
+        {
+            GameUIDirector.LocalPlayerInstance = this.gameObject;
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     void Start()
     {
@@ -20,9 +48,8 @@ public class GameUIDirector : MonoBehaviour
         if ((this.hpGaugeBottom.GetComponent<Image>().fillAmount <= 0) 
             || (this.hpGaugeTop.GetComponent<Image>().fillAmount <= 0))
         {
-            SceneManager.LoadScene("EndScene");
+            GameManager.Instance.LeaveRoom();
         }
-            
     }
 
     public void DecreaseHpBottom()

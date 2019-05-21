@@ -12,12 +12,6 @@ EditorBuildSettings:
     path: Assets/Launcher.unity
     guid: 4bb00893ac552794293266bbff57714f
   - enabled: 1
-    path: Assets/Room for 2.unity
-    guid: 78c438104012e98429e783d938762fc4
-  - enabled: 1
     path: Assets/GameScene.unity
     guid: 06eafbe6172c45f4291e69c84595f6f4
-  - enabled: 1
-    path: Assets/EndScene.unity
-    guid: 1184f8a9b7a06cf4bb7a0348497b79cc
   m_configObjects: {}
