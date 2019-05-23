@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c8c18264013fba4498ac0b70b30d0004
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - controlPanel: {fileID: 1942440965425591357, guid: 39af91d9777af5c429b005eba2fb1714,
+      type: 3}
+  - progressLabel: {fileID: 3644636051752359735, guid: 1301d73b0b0370a49aa23364b5fc4a33,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

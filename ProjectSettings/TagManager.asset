@@ -6,6 +6,10 @@ TagManager:
   tags:
   - PlayerBottom
   - PlayerTop
+  - arrowTop
+  - arrowLeft
+  - arrowBottom
+  - arrowRight
   layers:
   - Default
   - TransparentFX
