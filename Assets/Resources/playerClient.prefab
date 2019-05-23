@@ -113,18 +113,98 @@ PrefabInstance:
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
       objectReference: {fileID: 8646449193174846840}
     - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: ObservedComponents.Array.data[1]
       value: 
-      objectReference: {fileID: 8646449193174846841}
+      objectReference: {fileID: 0}
+    - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].Type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].Name
+      value: isWalking
+      objectReference: {fileID: 0}
+    - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_ScaleModel.InterpolateOption
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_ScaleModel.InterpolateLerpSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].Type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].Name
+      value: isWalking
+      objectReference: {fileID: 0}
+    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].SynchronizeType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 35, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_GravityScale
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 65, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 8646449193174846727}
+    - target: {fileID: 65, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 8646449193174846840}
+    - target: {fileID: 20, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_Name
+      value: playerClient
+      objectReference: {fileID: 0}
+    - target: {fileID: 66, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 8646449193174846726}
+    - target: {fileID: 66, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 8646449193174846727}
+    - target: {fileID: 19, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_Name
+      value: playerClient
+      objectReference: {fileID: 0}
+    - target: {fileID: 34, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_GravityScale
+      value: -3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
---- !u!114 &8646449193174846840 stripped
+--- !u!114 &8646449193174846726 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90,
+  m_CorrespondingSourceObject: {fileID: 65, guid: c44b734aff911cc4ea0f15268f500e90,
+    type: 3}
+  m_PrefabInstance: {fileID: 8646449193174846791}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8646449193174846727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90,
     type: 3}
   m_PrefabInstance: {fileID: 8646449193174846791}
   m_PrefabAsset: {fileID: 0}
@@ -134,9 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8646449193174846841 stripped
+--- !u!114 &8646449193174846840 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 62, guid: c44b734aff911cc4ea0f15268f500e90,
+  m_CorrespondingSourceObject: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90,
     type: 3}
   m_PrefabInstance: {fileID: 8646449193174846791}
   m_PrefabAsset: {fileID: 0}

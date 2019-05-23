@@ -1,24 +1,56 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
-using Photon.Realtime;
 
 public class PlayerManager : MonoBehaviourPunCallbacks
 {
-    public float Health = 1f;
+    public const float maxHealth = 100f;
+    public float health = 100f;
+    public Image hpGauge;
     public int myCount = 0;
 
-    // Start is called before the first frame update
-    void Start()
+
+    void FixedUpdate()
     {
-        if (PhotonNetwork.CurrentRoom.PlayerCount % 2 == 1)
+        OnChangeHealth(health);
+
+        if (!photonView.IsMine) return;
+        if (health <= 0f)
         {
-            myCount = 1;
+            GameManager.Instance.LeaveRoom();
         }
-        Debug.Log(myCount);
     }
 
+    void OnChangeHealth(float currentHealth)
+    {
+        hpGauge.fillAmount = health / maxHealth;
+    }
+
+    [PunRPC]
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+
+        if (health <= 0)
+        {
+            health = 0;
+        }
+    }
+
+    [PunRPC]
+    public void AddHealth(int amount)
+    {
+        health += amount;
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+    }
+
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -64,4 +96,5 @@ public class PlayerManager : MonoBehaviourPunCallbacks
         Health -= 0.1f;
         Debug.Log(Health);
     }
+    */
 }
