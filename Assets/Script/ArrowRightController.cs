@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class ArrowRightController : MonoBehaviour
 {
@@ -18,15 +19,13 @@ public class ArrowRightController : MonoBehaviour
     {
         if (other.tag == "PlayerBottom")
         {
-            GameObject director = GameObject.Find("GameUIDirector");
-            director.GetComponent<GameUIDirector>().DecreaseHpBottom();
+            other.GetComponent<PlayerManager>().photonView.RPC("TakeDamage", RpcTarget.All, 0.1f);
 
             Destroy(gameObject);
         }
         else if (other.tag == "PlayerTop")
         {
-            GameObject director = GameObject.Find("GameUIDirector");
-            director.GetComponent<GameUIDirector>().DecreaseHpTop();
+            other.GetComponent<PlayerManager>().photonView.RPC("TakeDamage", RpcTarget.All, 0.1f);
 
             Destroy(gameObject);
         }

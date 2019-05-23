@@ -5,9 +5,9 @@ using Photon.Pun;
 
 public class NetworkStatus : MonoBehaviourPun, IPunObservable
 {
-    private float health;
+    public float health;
 
-    private void Awake()
+    void Awake()
     {
         health = GetComponent<PlayerManager>().health;
     }

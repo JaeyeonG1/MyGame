@@ -6,10 +6,9 @@ using Photon.Pun;
 
 public class PlayerManager : MonoBehaviourPunCallbacks
 {
-    public const float maxHealth = 100f;
-    public float health = 100f;
+    public const float maxHealth = 1f;
+    public float health = 1f;
     public Image hpGauge;
-    public int myCount = 0;
 
 
     void FixedUpdate()
@@ -25,33 +24,9 @@ public class PlayerManager : MonoBehaviourPunCallbacks
 
     void OnChangeHealth(float currentHealth)
     {
-        hpGauge.fillAmount = health / maxHealth;
-    }
+        hpGauge.fillAmount = health;
+    }    
 
-    [PunRPC]
-    public void TakeDamage(int amount)
-    {
-        health -= amount;
-
-        if (health <= 0)
-        {
-            health = 0;
-        }
-    }
-
-    [PunRPC]
-    public void AddHealth(int amount)
-    {
-        health += amount;
-
-        if (health > maxHealth)
-        {
-            health = maxHealth;
-        }
-    }
-
-    /*
-    // Update is called once per frame
     void Update()
     {
         if (!photonView.IsMine)
@@ -62,39 +37,39 @@ public class PlayerManager : MonoBehaviourPunCallbacks
         {
             if (transform.position.y < -5)
             {
-                Health -= 0.1f;
+                TakeDamage(0.1f);
                 transform.position = new Vector3(0, -3, 0);
-                Debug.Log(Health);
+                Debug.Log(health);
             }
 
             if (transform.position.y > 5)
             {
-                Health -= 0.1f;
+                TakeDamage(0.1f);
                 transform.position = new Vector3(0, 3, 0);
-                Debug.Log(Health);
+                Debug.Log(health);
             }
         }
-        
-
-        if (Health <= 0f)
-        {
-            GameManager.Instance.LeaveRoom();
-        }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    [PunRPC]
+    public void TakeDamage(float amount)
     {
-        if (!photonView.IsMine)
-        {
-            return;
-        }
+        health -= amount;
 
-        if (!other.name.Contains("Arrow"))
+        if (health <= 0)
         {
-            return;
+            health = 0;
         }
-        Health -= 0.1f;
-        Debug.Log(Health);
     }
-    */
+
+    [PunRPC]
+    public void AddHealth(float amount)
+    {
+        health += amount;
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+    }
 }
