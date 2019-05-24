@@ -13,7 +13,6 @@ public class ArrowGenerator : MonoBehaviour
     private bool isin = true;
 
     float span = 1.0f;
-    float delta = 0;
 
     void Awake()
     {
@@ -55,7 +54,7 @@ public class ArrowGenerator : MonoBehaviour
 
         if (this.span > 0.4f)
         {
-            this.span *= 0.99f;
+            this.span *= 0.98f;
             Debug.Log(span);
         }
 

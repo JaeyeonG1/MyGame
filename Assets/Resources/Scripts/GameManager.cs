@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            Debug.LogFormat("We are Instantiating LocalPlayer from {0}", Application.loadedLevelName);
-
             // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
             if (PhotonNetwork.CurrentRoom.PlayerCount % 2 == 1)
             {

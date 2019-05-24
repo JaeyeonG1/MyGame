@@ -11,14 +11,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerClient
       objectReference: {fileID: 0}
+    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].Type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].Name
+      value: isWalking
+      objectReference: {fileID: 0}
+    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].SynchronizeType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 65, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
-      objectReference: {fileID: 8646449193174846759}
+      objectReference: {fileID: 0}
     - target: {fileID: 65, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: ObservedComponents.Array.data[1]
       value: 
-      objectReference: {fileID: 8646449193174846744}
+      objectReference: {fileID: 0}
     - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: m_SynchronizeParameters.Array.size
       value: 2
@@ -26,7 +42,7 @@ PrefabInstance:
     - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
-      objectReference: {fileID: 8646449193174846744}
+      objectReference: {fileID: 0}
     - target: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: ObservedComponents.Array.data[1]
       value: 
@@ -148,22 +164,6 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: -3
       objectReference: {fileID: 0}
-    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_SynchronizeParameters.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_SynchronizeParameters.Array.data[1].Type
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_SynchronizeParameters.Array.data[1].Name
-      value: isWalking
-      objectReference: {fileID: 0}
-    - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_SynchronizeParameters.Array.data[1].SynchronizeType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 35, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: m_GravityScale
       value: -3
@@ -175,11 +175,11 @@ PrefabInstance:
     - target: {fileID: 66, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
-      objectReference: {fileID: 8646449193174846758}
+      objectReference: {fileID: 0}
     - target: {fileID: 66, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: ObservedComponents.Array.data[1]
       value: 
-      objectReference: {fileID: 8646449193174846759}
+      objectReference: {fileID: 0}
     - target: {fileID: 19, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: m_Name
       value: playerClient
@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 62, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: hpGauge
       value: 
-      objectReference: {fileID: 8646449193174846776}
+      objectReference: {fileID: 0}
     - target: {fileID: 6484071941155813981, guid: c44b734aff911cc4ea0f15268f500e90,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -206,23 +206,31 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -150
       objectReference: {fileID: 0}
+    - target: {fileID: 23, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_Name
+      value: playerClient
+      objectReference: {fileID: 0}
+    - target: {fileID: 50, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_GravityScale
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 94, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: hpGauge
+      value: 
+      objectReference: {fileID: 8646449193174846776}
+    - target: {fileID: 97, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 8646449193174846759}
+    - target: {fileID: 97, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 8646449193174846744}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
---- !u!114 &8646449193174846758 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 65, guid: c44b734aff911cc4ea0f15268f500e90,
-    type: 3}
-  m_PrefabInstance: {fileID: 8646449193174846791}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8646449193174846759 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 64, guid: c44b734aff911cc4ea0f15268f500e90,
+  m_CorrespondingSourceObject: {fileID: 96, guid: c44b734aff911cc4ea0f15268f500e90,
     type: 3}
   m_PrefabInstance: {fileID: 8646449193174846791}
   m_PrefabAsset: {fileID: 0}
@@ -234,7 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &8646449193174846744 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90,
+  m_CorrespondingSourceObject: {fileID: 95, guid: c44b734aff911cc4ea0f15268f500e90,
     type: 3}
   m_PrefabInstance: {fileID: 8646449193174846791}
   m_PrefabAsset: {fileID: 0}
@@ -246,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &8646449193174846776 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6554852327895557095, guid: c44b734aff911cc4ea0f15268f500e90,
+  m_CorrespondingSourceObject: {fileID: 127, guid: c44b734aff911cc4ea0f15268f500e90,
     type: 3}
   m_PrefabInstance: {fileID: 8646449193174846791}
   m_PrefabAsset: {fileID: 0}
