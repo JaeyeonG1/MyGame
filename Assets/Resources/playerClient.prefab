@@ -11,6 +11,66 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerClient
       objectReference: {fileID: 0}
+    - target: {fileID: 23, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_Name
+      value: playerClient
+      objectReference: {fileID: 0}
+    - target: {fileID: 23, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_TagString
+      value: PlayerTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 62, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: hpGauge
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 50, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_GravityScale
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 94, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: hpGauge
+      value: 
+      objectReference: {fileID: 8646449193174846776}
+    - target: {fileID: 97, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 8646449193174846759}
+    - target: {fileID: 97, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 8646449193174846744}
+    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 35, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
+      propertyPath: m_GravityScale
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 63, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: m_SynchronizeParameters.Array.size
       value: 2
@@ -132,39 +192,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b308f4f1caf4a9f4ca3192e384646bee,
         type: 3}
-    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 33, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_GravityScale
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 35, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
       propertyPath: m_GravityScale
       value: -3
       objectReference: {fileID: 0}
@@ -192,10 +220,6 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: -3
       objectReference: {fileID: 0}
-    - target: {fileID: 62, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: hpGauge
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6484071941155813981, guid: c44b734aff911cc4ea0f15268f500e90,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -206,26 +230,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -150
       objectReference: {fileID: 0}
-    - target: {fileID: 23, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_Name
-      value: playerClient
-      objectReference: {fileID: 0}
-    - target: {fileID: 50, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: m_GravityScale
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 94, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: hpGauge
-      value: 
-      objectReference: {fileID: 8646449193174846776}
-    - target: {fileID: 97, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: ObservedComponents.Array.data[0]
-      value: 
-      objectReference: {fileID: 8646449193174846759}
-    - target: {fileID: 97, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
-      propertyPath: ObservedComponents.Array.data[1]
-      value: 
-      objectReference: {fileID: 8646449193174846744}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c44b734aff911cc4ea0f15268f500e90, type: 3}
 --- !u!114 &8646449193174846759 stripped
