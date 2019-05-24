@@ -29,13 +29,13 @@ public class ArrowController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "PlayerBottom")
+        if (PhotonNetwork.IsMasterClient && other.tag == "PlayerBottom")
         {
             other.GetComponent<PlayerManager>().photonView.RPC("TakeDamage", RpcTarget.All, 0.05f);
 
             Destroy(gameObject);
         }
-        else if (other.tag == "PlayerTop")
+        else if (!PhotonNetwork.IsMasterClient && other.tag == "PlayerTop")
         {
             other.GetComponent<PlayerManager>().photonView.RPC("TakeDamage", RpcTarget.All, 0.05f);
 

@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviourPunCallbacks
     public static GameManager Instance;
     public GameObject playerMaster;
     public GameObject playerClient;
+    public GameObject MainMaster;
+    public GameObject MainClient;
 
     private void Start()
     {        Instance = this;
@@ -26,11 +28,13 @@ public class GameManager : MonoBehaviourPunCallbacks
             if (PhotonNetwork.CurrentRoom.PlayerCount % 2 == 1)
             {
                 PhotonNetwork.Instantiate(this.playerMaster.name, new Vector3(0f, -3.96f, 0f), Quaternion.identity, 0);
+                Instantiate(MainMaster);
                 Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount % 2);
             }
             else if(PhotonNetwork.CurrentRoom.PlayerCount % 2 == 0)
             {
                 PhotonNetwork.Instantiate(this.playerClient.name, new Vector3(0f, 3.96f, 0f), Quaternion.Euler(180, 0, 0), 0);
+                Instantiate(MainClient);
                 Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount % 2);
             }
         }   

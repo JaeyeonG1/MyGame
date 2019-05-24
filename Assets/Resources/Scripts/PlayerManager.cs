@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks
     public const float maxHealth = 1f;
     public float health = 1f;
     public Image hpGauge;
-    
+
     void OnChangeHealth(float currentHealth)
     {
         hpGauge.fillAmount = health;
@@ -18,8 +18,6 @@ public class PlayerManager : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        OnChangeHealth(health);
-
         if (health <= 0f)
         {
             if (photonView.IsMine)
@@ -34,16 +32,19 @@ public class PlayerManager : MonoBehaviourPunCallbacks
             }
         }
 
+        if (!PhotonNetwork.IsMasterClient) return;
+
         if (this.tag == "PlayerBottom" && transform.position.y < -5)
         {
-            this.GetComponent<PlayerManager>().photonView.RPC("TakeDamage", RpcTarget.All, 0.1f);
             this.transform.position = new Vector3(0, -3, 0);
         }
+
         if (this.tag == "PlayerTop" && transform.position.y > 5)
         {
-            this.GetComponent<PlayerManager>().photonView.RPC("TakeDamage", RpcTarget.All, 0.1f);
             this.transform.position = new Vector3(0, 3, 0);
         }
+
+        OnChangeHealth(health);
     }
 
     [PunRPC]

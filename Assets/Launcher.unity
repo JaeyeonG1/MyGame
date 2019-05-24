@@ -622,6 +622,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1692292051}
+    - target: {fileID: 1942440965130724009, guid: 39af91d9777af5c429b005eba2fb1714,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942440965130724009, guid: 39af91d9777af5c429b005eba2fb1714,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942440965130724009, guid: 39af91d9777af5c429b005eba2fb1714,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942440965130724009, guid: 39af91d9777af5c429b005eba2fb1714,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39af91d9777af5c429b005eba2fb1714, type: 3}
 --- !u!1001 &3644636052286358236
@@ -704,12 +724,12 @@ PrefabInstance:
     - target: {fileID: 3644636051752359728, guid: 1301d73b0b0370a49aa23364b5fc4a33,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 3644636051752359728, guid: 1301d73b0b0370a49aa23364b5fc4a33,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 3644636051752359728, guid: 1301d73b0b0370a49aa23364b5fc4a33,
         type: 3}
@@ -740,6 +760,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644636051752359729, guid: 1301d73b0b0370a49aa23364b5fc4a33,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644636051752359729, guid: 1301d73b0b0370a49aa23364b5fc4a33,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644636051752359729, guid: 1301d73b0b0370a49aa23364b5fc4a33,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1301d73b0b0370a49aa23364b5fc4a33, type: 3}
